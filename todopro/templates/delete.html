@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" type="text/css" href="{% static 'css/style3.css' %}"/>
+       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing Script">
+       <title>Delete</title>
+   </head>
+   <body>
+     <center>
+        <form method="post" class="del-mid" >
+           <a class="cancel" href="{% url 'item' %}" >×</a>
+           {% csrf_token %}
+           <p class="fondd">Are you sure you want to delete "{{ object }}"?</p>
+           <input class="subutton" type="submit" value="Confirm">
+        </form>
+     </center>
+   </body>
+</html>

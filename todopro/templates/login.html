@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns:placeholder="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style3.css' %}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing Script">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body class="bg2" >
+<center>
+<form method="post" action="{% url 'login' %}" class="form1">
+    <h2>Login</h2>
+    {% csrf_token %}
+    {{form.username}}<br>
+    {{form.password}}
+    <h4><a class="fp" href="">Forgot password ?</a></h4>
+    <input class="login"  type="submit" value="Login">
+    <h5>Don't have an account ?<a class="sp" href="{% url 'signup' %}">Signup</a></h5>
+</form>
+</center>
+</body>
+</html>

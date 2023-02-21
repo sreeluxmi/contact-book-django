@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>signup</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style3.css' %}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing Script">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="bg1">
+<center>
+<form action="" method="post" class="signup">
+    {% csrf_token %}
+    <h2>Sign up</h2>
+
+    <input type="text" id="username" name="username" placeholder="create a username"><br>
+
+    <input type="text" id="fname" name="fname" placeholder="Enter first name"><br>
+
+    <input type="text" id="lname" name="lname" placeholder="Enter last name"><br>
+
+    <input type="email" id="email" name="email" placeholder="Email id"><br>
+
+    <input type="password" id="pass1" name="pass1" placeholder="create a password"><br>
+
+    <input type="password" id="pass2" name="pass2" placeholder="Confirm password"><br>
+
+    <button class="signupp" type="submit">Sign Up</button><br>
+    <h5>Already have an account ?<a class="sp" href="{% url 'login' %}">Login</a></h5>
+
+</form>
+</center>
+</body>
+</html>

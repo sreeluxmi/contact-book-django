@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style3.css' %}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=roboto">
+    <script src="https://kit.fontawesome.com/c96103c6a1.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listtask</title>
+</head>
+<body>
+<div class="navbar">
+  <div class="user">
+    <ul>
+        {% if request.user.is_authenticated %}
+        <li class="left"><p>{{request.user}}</p></li>
+        <li><a id="move-left" class="add" href="{% url 'create-task' %}">ADD</a></li>
+        <li><a class="add"  href="{% url 'login' %}">LOGOUT   </a></li>
+      {% else %}
+      {% endif %}
+    </ul>
+  </div>
+</div>
+<center >
+    <div class="main">
+       <h1 >To do list</h1>
+       <div >
+          <table >
+              {% for task in item %}
+              <tr>
+                 {% if task.complete == True %}
+                   <td class="main-task">
+                      <strike>{{task.title}}<hr></strike>
+                   </td>
+                 {% else %}
+                   <td class="main-task">
+                      {{task.title}}<hr>
+                   </td>
+                 {% endif %}
+                   <td class="option" ><a href="{% url 'detail-task' task.id %}"><i class="fa-solid fa-eye"  ></i></a></td>
+                   <td class="option"><a href="{% url 'update-task' task.id %}"><i class="fa-solid fa-pen"  ></i></a></td>
+                   <td class="option"><a href="{% url 'delete-task' task.id %}"><i class="fa-solid fa-trash"></i></a></td>
+              </tr>
+              {%  endfor %}
+          </table>
+       </div>
+    </div>
+</center>
+</body>
+</html>
