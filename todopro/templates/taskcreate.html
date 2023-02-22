@@ -9,6 +9,18 @@
     <title>create</title>
 </head>
 <body >
+<div class="navbar">
+  <div class="user">
+    <ul>
+        {% if request.user.is_authenticated %}
+        <li class="left"><p>{{request.user}}</p></li>
+        <li><a id="move-left" class="add" href="{% url 'create-task' %}">ADD</a></li>
+        <li><a class="add"  href="{% url 'login' %}">LOGOUT   </a></li>
+      {% else %}
+      {% endif %}
+    </ul>
+  </div>
+</div>
 <center>
   <form method="post" action="" class="formm">
      <a class="cancel1" href="{% url 'item' %}" >×</a>

@@ -1,6 +1,6 @@
 body{
 margin      :0;
-font-family:roboto;
+font-family  : Roboto,Arial,sans-serif;
 }
 .signup{
 margin-top   : 80px;
@@ -11,7 +11,6 @@ border-radius:5px;
 background   :aliceblue;
 box-shadow   : 0 12px 16px 0 rgba(0,0,0,0.24);
 }
-
 .signup input{
 width        : 310px;
 height       :30px;
@@ -99,8 +98,8 @@ margin     :0;
 }
 
 .navbar {
-box-shadow      : 0 4px 6px 0 rgb(53 50 50 / 24%);
-background-color: white;
+box-shadow      : 1px 1px 5px 0 rgb(53 50 50 / 24%);
+background-color:  #3566b66e;;
 overflow        : hidden;
 width           :100%;
 height          :70px;
@@ -130,6 +129,7 @@ box-shadow: 0 4px 9px -4px #3b71ca;
 box-shadow: 0 8px 9px -4px rgba(0,0,0,0.15),0 4px 18px 0 rgba(0,0,0,0.1);
 background-color:#386bc0;
 color :white;
+border :1px solid white;
 cursor: pointer;
 }
 
@@ -186,7 +186,7 @@ padding : 30px;
 }
 
 strike{
-color :red;
+color :#0014ff9c;;
 }
 
 .option{
@@ -278,9 +278,8 @@ font-size:30px;
 }
 
 .del-mid{
-margin-top :20px;
-border : 1px solid black;
-border-radius : 9px;
+border :none;
+border-radius : 5px;
 width :770px;
 height:220px;
 margin-top : 200px;
@@ -289,10 +288,11 @@ box-shadow : 0 6px 6px 0 rgb(53 50 50 / 24%),0 -2px 2px 0 rgb(0 0 0 / 8%);
 }
 
 .cancel{
-margin-left  :700px;
+margin-left  :720px;
 display:block;
 text-decoration :none;
 color : black;
+font-size:30px;
 }
 
 
